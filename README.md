@@ -4,7 +4,7 @@ Java Spring Professional Course Challenge - CRUD-Clients
 # DESCRIPTION
 This is a RESTful API built with Spring Boot that implements a CRUD system to manage client resources. This project applies data validation and global exception handling.
 
-# USED TEChNOLOGIES
+# USED TECHNOLOGIES
 - Java 21
 - Spring Boot 4
 - Spring Web
