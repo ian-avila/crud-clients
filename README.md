@@ -21,13 +21,13 @@ This is a RESTful API built with Spring Boot that implements a CRUD system to ma
 - Update Clients
 - Delete Clients
 
-# API ENDPOINTS
-GET /clients
-GET /clients/{id}
-GET /clients?queryparams
-POST /clients
-PUT /clients/{id}
-DELETE /clients/{id}
+## API ENDPOINTS
+- GET /clients
+- GET /clients/{id}
+- GET /clients?queryparams
+- POST /clients
+- PUT /clients/{id}
+- DELETE /clients/{id}
 
 # POSTMAN COLLECTION
 Will be added after project completion.
