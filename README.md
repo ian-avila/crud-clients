@@ -29,9 +29,6 @@ This is a RESTful API built with Spring Boot that implements a CRUD system to ma
 - PUT /clients/{id}
 - DELETE /clients/{id}
 
-# POSTMAN COLLECTION
-Will be added after project completion.
-
 # INSTRUCTIONS
 1. git clone https://github.com/ian-avila/CRUD-Clients.git
 2. cd project-folder
