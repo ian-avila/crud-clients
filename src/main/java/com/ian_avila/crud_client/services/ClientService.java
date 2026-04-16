@@ -21,7 +21,6 @@ public class ClientService {
         this.clientRepository = clientRepository;
     }
 
-
     public ClientResponse findById(Long id) {
         Client client = clientRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Resource not found"));
         return ClientMapper.toResponse(client);
