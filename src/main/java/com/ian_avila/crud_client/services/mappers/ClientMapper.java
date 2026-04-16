@@ -13,11 +13,21 @@ public final class ClientMapper {
     }
 
     public static void updateEntity(ClientUpdateRequest request, Client client) {
-        client.setName(request.getName());
-        client.setCpf(request.getCpf());
-        client.setIncome(request.getIncome());
-        client.setBirth_date(request.getBirth_date());
-        client.setChildren(request.getChildren());
+        if (request.getName() != null) {
+            client.setName(request.getName());
+        }
+
+        if (request.getIncome() != null) {
+            client.setIncome(request.getIncome());
+        }
+
+        if (request.getBirth_date() != null) {
+            client.setBirth_date(request.getBirth_date());
+        }
+
+        if (request.getChildren() != null) {
+            client.setChildren(request.getChildren());
+        }
     }
 
     public static ClientResponse toResponse(Client client) {
@@ -25,6 +35,6 @@ public final class ClientMapper {
     }
 
     public static ClientSummary toSummary(Client client) {
-       return new ClientSummary(client.getId(), client.getName(), client.getCpf(), client.getIncome(), client.getBirth_date(), client.getChildren());
+        return new ClientSummary(client.getId(), client.getName(), client.getCpf(), client.getIncome(), client.getBirth_date(), client.getChildren());
     }
 }

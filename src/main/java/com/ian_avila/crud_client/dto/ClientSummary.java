@@ -10,15 +10,15 @@ public class ClientSummary {
     private String name;
     private String cpf;
     private Double income;
-    private LocalDate birth_date;
+    private LocalDate birthDate;
     private Integer children;
 
-    public ClientSummary(Long id, String name, String cpf, Double income, LocalDate birth_date, Integer children) {
+    public ClientSummary(Long id, String name, String cpf, Double income, LocalDate birthDate, Integer children) {
         this.id = id;
         this.name = name;
         this.cpf = cpf;
         this.income = income;
-        this.birth_date = birth_date;
+        this.birthDate = birthDate;
         this.children = children;
     }
 
@@ -39,7 +39,7 @@ public class ClientSummary {
     }
 
     public LocalDate getBirth_date() {
-        return birth_date;
+        return birthDate;
     }
 
     public Integer getChildren() {
