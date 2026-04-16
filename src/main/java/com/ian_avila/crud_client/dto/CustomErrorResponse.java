@@ -41,4 +41,8 @@ public class CustomErrorResponse {
     public void add(FieldError fieldError) {
         errors.put(fieldError.getField(), fieldError.getDefaultMessage());
     }
+
+    public Map<String, String> getErrors() {
+        return errors;
+    }
 }

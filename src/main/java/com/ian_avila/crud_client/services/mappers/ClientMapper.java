@@ -17,6 +17,10 @@ public final class ClientMapper {
             client.setName(request.getName());
         }
 
+        if (request.getCpf() != null) {
+            client.setCpf(request.getCpf());
+        }
+
         if (request.getIncome() != null) {
             client.setIncome(request.getIncome());
         }

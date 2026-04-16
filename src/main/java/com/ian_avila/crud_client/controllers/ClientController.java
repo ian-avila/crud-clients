@@ -5,6 +5,7 @@ import com.ian_avila.crud_client.dto.ClientResponse;
 import com.ian_avila.crud_client.dto.ClientSummary;
 import com.ian_avila.crud_client.dto.ClientUpdateRequest;
 import com.ian_avila.crud_client.services.ClientService;
+import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
@@ -34,19 +35,19 @@ public class ClientController {
     }
 
     @PostMapping
-    public ResponseEntity<ClientResponse> insert(@RequestBody ClientCreateRequest request) {
+    public ResponseEntity<ClientResponse> insert(@Valid @RequestBody ClientCreateRequest request) {
         return ResponseEntity.status(HttpStatus.CREATED.value()).body(service.insert(request));
     }
 
     @PutMapping(value = "/{id}")
-    public ResponseEntity<ClientResponse> update(@RequestBody ClientUpdateRequest request, @PathVariable Long id) {
+    public ResponseEntity<ClientResponse> update(@Valid @RequestBody ClientUpdateRequest request, @PathVariable Long id) {
         return ResponseEntity.status(HttpStatus.OK.value()).body(service.update(request, id));
     }
 
     @DeleteMapping(value = "/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
         service.delete(id);
-        return ResponseEntity.status(HttpStatus.NOT_FOUND.value()).build();
+        return ResponseEntity.status(HttpStatus.NO_CONTENT.value()).build();
     }
 
 }
